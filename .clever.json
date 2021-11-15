@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_c6c8cc67-2128-4cbd-af97-c057a1614f0b",
+      "org_id": "user_ed40cea1-39d1-49b7-b310-ff40364ccd4c",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_c6c8cc67-2128-4cbd-af97-c057a1614f0b.git",
+      "name": "VanCation",
+      "alias": "VanCation"
+    }
+  ]
+}
