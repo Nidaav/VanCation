@@ -1,14 +1,10 @@
 <h1>Our Vans</h1>
 
-<%= cl_image_tag("popcorn",
-      width: 400, height: 300, crop: :fill) %>
 
 <ul>
   <% @vans.each do |van| %>
     <li>
-      <%= link_to(van.model, vans_path(van)) %>
+      <%= link_to(van.model, van_path(van)) %>
     </li>
   <% end %>
 </ul>
-<h1>Vans#index</h1>
-<p>Find me in app/views/vans/index.html.erb</p>
