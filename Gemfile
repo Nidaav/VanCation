@@ -6,7 +6,7 @@ ruby '2.7.4'
 gem 'greensock-rails'
 gem 'simple_form'
 
-gem 'c~> 6.0.4', '>= 6.0.4.1'
+gem 'rails', '~> 6.0.4', '>= 6.0.4.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
