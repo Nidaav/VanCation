@@ -1,0 +1,35 @@
+<nav class="nav-desktop">
+  <div class="left">
+    <%= image_tag "vancation-02.png", class: "logo" %>
+  </div>
+  <div class="center">
+    <ul class="nav-items">
+      <li class="item"><%= link_to 'HOME', root_path, class: "btn-nav"%></li>
+      <li class="item"><%= link_to 'EXPLORE', vans_path, class: "btn-nav"%></li>
+      <li class="item"><%= link_to '', "#TODO", class: "btn-nav"%></li>
+      <li class="item"><%= link_to '', "#TODO", class: "btn-nav"%></li>
+    </ul>
+  </div>
+  <div class="right">
+    <div class="container-user">
+      <i class="fas fa-bars"></i>
+      <div class="log" style="display: none;">
+        <div class="log-d-flex">
+          <% unless current_user %>
+            <div class="connexion item-log">
+              <%= link_to 'Connexion', user_session_path, class: "btn-log"%>
+            </div>
+            <div class="insciption item-log">
+              <%= link_to 'Inscription', new_user_registration_path, class: "btn-log"%>
+            </div>
+          <% else %>
+            <div class="deconection item-log">
+              <%= link_to 'Deconection', destroy_user_session_path, method: :delete ,class: "btn-log"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="avatar"></div>
+    </div>
+  </div>
+</nav>

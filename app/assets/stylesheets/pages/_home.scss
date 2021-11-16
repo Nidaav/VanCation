@@ -1,1 +1,170 @@
-// Specific CSS for your home-page
+.home {
+  height: auto;
+  width: 100%;
+  overflow-y: scroll;
+  background-color: $color-3;
+  margin: 0 auto;
+
+  .banner {
+    background-image: image-url('banner2.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .section-banner {
+      width: 80%;
+      text-align: center;
+
+      h1 {
+        font-size: 9rem;
+        color: $color-1;
+      }
+
+      p {
+        font-size: 2rem;
+        color: $color-3;
+      }
+    }
+    .btn-discover {
+      text-align: start;
+      background-color: $vert;
+      padding: 16px 24px;
+      border-radius: 8px;
+      color: $color-1;
+      text-decoration: none;
+      transition: 1s ease-in-out;
+
+      a {
+        color: $color-1;
+        text-decoration: none;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        transition: 1s ease-in-out;
+      }
+    }
+  }
+
+
+  .container {
+    height: auto;
+    width: 60%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .dflex-container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .home-info {
+        height: 400px;
+        width: 50%;
+        color: $color-1;
+      }
+
+      .left-home-info {
+        background-image: image-url('van-night-home.jpg');
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+      }
+    }
+  }
+
+  .container {
+
+    .box-flex-column {
+      height: 200px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .box-title {
+
+        p {
+          color: $color-2;
+          text-align: center;
+          margin: 0;
+        }
+      }
+
+      .box-svg {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        position: relative;
+        transition: 1s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: 1s ease-in-out;
+        }
+
+        .box-number {
+          text-align: center;
+          height: 25px;
+          width: 25px;
+          background: $vert;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .box-svg-1 {
+        background-image: image-url('car.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
+      .box-svg-2 {
+        background-image: image-url('enjoy.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
+      .box-svg-3 {
+        background-image: image-url('reviews.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+
+  .home {
+
+    .banner {
+
+      .section-banner {
+
+         .title-home {
+          font-size: 4rem;
+        }
+        .description-home {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

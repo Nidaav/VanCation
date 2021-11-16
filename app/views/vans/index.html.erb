@@ -5,6 +5,11 @@
   <% @vans.each do |van| %>
   <div class="card-trip">
     <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path van.photos.first.key, crop: :fill %>)">
+<h1>Our Vans</h1>
+<ul>
+  <% @vans.each do |van| %>
+    <li>
+      <%= link_to(van.model, van_path(van)) %>
     </li>
     <div class="card-trip-infos">
       <div>

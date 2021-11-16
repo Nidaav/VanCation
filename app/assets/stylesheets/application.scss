@@ -12,3 +12,17 @@
 @import "components/index";
 @import "pages/index";
 @import "components/card_index";
+
+body {
+  height: 100vh;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  .main {
+    overflow-y: auto;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
