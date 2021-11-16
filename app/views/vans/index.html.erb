@@ -1,5 +1,8 @@
 <h1>Our Vans</h1>
 
+<%= cl_image_tag("popcorn",
+      width: 400, height: 300, crop: :fill) %>
+
 <ul>
   <% @vans.each do |van| %>
     <li>
