@@ -6,6 +6,7 @@ class VansControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+
   test "should get show" do
     get vans_show_url
     assert_response :success
