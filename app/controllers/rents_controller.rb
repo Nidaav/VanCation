@@ -1,5 +1,6 @@
 class RentsController < ApplicationController
-  def
-    @bookings = Bookings.all
+  def index
+    @bookings = Booking.all
+    @booking = Booking.new
   end
 end

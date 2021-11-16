@@ -2,7 +2,8 @@
 <ul>
   <% @bookings.each do |booking| %>
     <li>
-      <%= link_to(booking.van, booking_path(booking)) %>
+      <%= link_to(booking.van, bookings_path(@booking)) %>
+      <p>Your booking </p>
     </li>
   <% end %>
 </ul>
