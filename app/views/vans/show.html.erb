@@ -2,3 +2,5 @@
 <h2><%= @van.price %>€/jour</h2>
 <h3><%= @van.capacity %>places</h3>
 <p><%= @van.description %></p>
+
+<%= cl_image_tag(@van.photos.first.key, width: 400, height: 300, crop: :fill) %>

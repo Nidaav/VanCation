@@ -3,7 +3,10 @@ class BookingsController < ApplicationController
     @van = Van.find(params[:van_id])
     @booking = Booking.new
   end
-
+  
+  def accept
+  end
+  
   def create
     @van = Van.find(params[:van_id])
     @booking = Booking.new(booking_params)
