@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
   def decline
     @booking.status = "Declined !"
   end
-
+  
   def create
     @van = Van.find(params[:van_id])
     @booking = Booking.new(booking_params)
