@@ -5,5 +5,4 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
     get bookings_accept_url
     assert_response :success
   end
-
 end
