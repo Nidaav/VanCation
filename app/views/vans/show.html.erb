@@ -4,3 +4,4 @@
 <p><%= @van.description %></p>
 
 <%= cl_image_tag(@van.photos.first.key, width: 400, height: 300, crop: :fill) %>
+<%= link_to("Book now", new_van_booking_path(@van), { class: "button-view-details"}) %>
