@@ -1,7 +1,17 @@
-<h1><%= @van.model %></h1>
-<h2><%= @van.price %>€/jour</h2>
-<h3><%= @van.capacity %>places</h3>
-<p><%= @van.description %></p>
+<div class="van_card">
+  <div class="info_section">
+    <div class="van_header">
+      <%= cl_image_tag(@van.photos.first.key, width: 200, height: 100, crop: :fill, class: "image_show_van") %>
+      <h1><%= @van.model %></h1>
+      <span class="price"><%= @van.price %>€/jour</span>
+      <p class="type"><%= @van.capacity %>places</p>
+    </div>
 
-<%= cl_image_tag(@van.photos.first.key, width: 400, height: 300, crop: :fill) %>
-<%= link_to("Book now", new_van_booking_path(@van), { class: "button-view-details"}) %>
+    <div class="van_desc">
+      <p class="text"><%= @van.description %></p>
+    </div>
+    <div>
+      <%= link_to("Book now", new_van_booking_path(@van), { class: "button-view-details"}) %>
+    </div>
+  </div>
+</div>
