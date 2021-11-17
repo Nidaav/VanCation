@@ -1,11 +1,29 @@
-<h1>Vans#new</h1>
-<p>Find me in app/views/vans/new.html.erb</p>
-<%= simple_form_for @van do |f| %>
-  <%= f.input :model %>
-  <%= f.input :price %>
-  <%= f.input :capacity %>
-  <%= f.input :description %>
-  <%= f.submit %>
-<% end %>
+<div class="page-log-in">
+   <div class="container-login">
+    <div class="logo-container">
+       <%= image_tag "vancation-02.png", class: "logo" %>
+    </div>
+    <h2>Add a van</h2>
+    <%= simple_form_for @van do |f| %>
+      <%= f.error_notification %>
 
-redirect_to
+      <div class="form-inputs">
+        <%= f.input :model,
+                    required: true,
+                    autofocus: true %>
+        <%= f.input :capacity,
+                    required: true %>
+        <%= f.input :price,
+                    required: true %>
+        <%= f.input :description,
+                    required: true %>
+        <%= f.input :photos, as: :file,
+                    required: true %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Add this van" %>
+      </div>
+    <% end %>
+  </div>
+</div>
