@@ -1,9 +1,13 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = current_user.bookings.order(starts_at: :desc)
+  end
+
   def new
     @van = Van.find(params[:van_id])
     @booking = Booking.new
   end
-  
+
   def accept
   end
 
@@ -16,7 +20,7 @@ class BookingsController < ApplicationController
     @booking.price_total = @van.price * ((@booking.ends_at - @booking.starts_at).to_i + 1) / (24 * 60 * 60)
     p @booking.price_total
     if @booking.save!
-      redirect_to(van_path(@van))
+      redirect_to(bookings_path)
     else
       render 'new'
     end

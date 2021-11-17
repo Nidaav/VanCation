@@ -24,6 +24,9 @@
             </div>
           <% else %>
             <div class="deconection item-log">
+              <%= link_to 'My bookings', bookings_path, class: "btn-log"%>
+            </div>
+            <div class="deconection item-log">
               <%= link_to 'Deconection', destroy_user_session_path, method: :delete ,class: "btn-log"%>
             </div>
           <% end %>
