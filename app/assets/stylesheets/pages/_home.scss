@@ -30,23 +30,36 @@
         color: $color-3;
       }
     }
+
     .btn-discover {
       text-align: start;
-      background-color: $vert;
       padding: 16px 24px;
+      margin: 5px;
       border-radius: 8px;
-      color: $color-1;
       text-decoration: none;
       transition: 1s ease-in-out;
-
-      a {
-        color: $color-1;
-        text-decoration: none;
-      }
 
       &:hover {
         transform: scale(1.1);
         transition: 1s ease-in-out;
+      }
+    }
+
+    .your-van {
+      background-color: $color-1;
+
+      & a {
+        color: $vert;
+        text-decoration: none;
+      }
+    }
+
+    .all-vans {
+      background-color: $vert;
+
+
+      .all-vans a  {
+        color: red;
       }
     }
   }
