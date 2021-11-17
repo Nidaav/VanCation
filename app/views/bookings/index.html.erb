@@ -1,16 +1,18 @@
-<div class="container">
-<h1>Your bookings</h1>
-<% @bookings.each do |booking| %>
-  <ul>
-    <li>
-      <%= booking.van.model %>
-      <%= booking.van.capacity %>places
-      <%= booking.van.description %>
-      <%# img_tag(<%cl_image_path van.photos.first.key%>) %>
-      <%= booking.price_total %>€
-      <%= booking.starts_at.strftime("From %d/%m/%Y") %>
-      <%= booking.ends_at.strftime("to %d/%m/%Y")  %>
-    </li>
-  </ul>
-  <% end %>
+<div class="container-booking">
+  <h1>Your bookings</h1>
+    <% @bookings.each do |booking| %>
+      <ul>
+        <li class="li-img">
+          <%= cl_image_tag(booking.van.photos.first.key, width: 400, crop: :fill, class: "img-van") %>
+        </li>
+        <li>
+          <h4><%= booking.van.model %></h4>
+          <p><%= booking.van.capacity %> places</p>
+          <p><%= booking.van.description %></p>
+          <p><%= booking.price_total %> €</p>
+          <%= booking.starts_at.strftime("From %d/%m/%Y") %>
+          <%= booking.ends_at.strftime("to %d/%m/%Y")  %>
+        </li>
+      </ul>
+      <% end %>
 </div>
