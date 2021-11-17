@@ -72,6 +72,10 @@
           background-color: $vert;
           border-radius: 8px;
 
+          .deconection {
+            border-top: 1px solid $color-1;
+          }
+
           .item-log {
             height: 30px;
             width: 200px;
@@ -83,7 +87,6 @@
             cursor: pointer;
 
             &.item-log:hover {
-              transform: scale(1.1);
               transition: 1s ease-in-out;
             }
 
