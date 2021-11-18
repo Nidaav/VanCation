@@ -8,6 +8,14 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
+  def accept
+    @booking.status = "Accepted <i class='fas fa-check'></i>"
+  end
+
+  def decline
+    @booking.status = "Declined <i class='fas fa-times'></i>"
+  end
+  
   def create
     @van = Van.find(params[:van_id])
     @booking = Booking.new(booking_params)

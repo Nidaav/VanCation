@@ -1,24 +1,26 @@
-
-<div class="container-index-vans">
-<h1 class="title-van">Our Vans</h1>
-
-<ul>
-  <% @vans.each do |van| %>
-  <div class="card-trip">
-    <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path van.photos.first.key, crop: :fill %>)">
-  </li>
-
-    <div class="card-trip-infos">
-      <div>
-        <%= link_to(van.model, van_path(van), { class: "title"}) %>
-        <p><%= van.description %></p>
-      </div>
-    <div class="card-trip-pricing">
-      <p><%= van.price %>€/jour | <%= van.capacity %>places</p>
-      <%= link_to("View now", van_path(van), { class: "button-view-details"}) %>
+<div class="container-vans">
+  <div class="container-d-flex">
+    <div class="container-vans">
+      <% @vans.each do |van| %>
+        <div class="card-vans">
+          <div class="img-van">
+            <%= cl_image_tag(van.photos.first.key, height: 200, width: 200, crop: :fill, class: "img-van") %>
+          </div>
+          <div class="info-van">
+            <div class="info-van-left">
+              <h3 class="van-model"><%= van.model %></h3>
+              <p class="van-capacity"><%= van.capacity %> places</p>
+              <p class="van-price"><%= van.price %> € / jour</p>
+            </div>
+            <div class="info-van-right">
+              <p><%= van.description %></p>
+              <%= link_to("View now", van_path(van),  class: "van-show") %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
+    <div class="container-map">
     </div>
   </div>
-    <% end %>
-</ul>
 </div>

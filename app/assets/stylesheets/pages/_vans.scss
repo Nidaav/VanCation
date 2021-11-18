@@ -1,0 +1,115 @@
+.container-vans {
+  height: 100%;
+  width: 100%;
+  background-color: $color-3;
+
+  .container-d-flex {
+    height: 100%;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .container-vans {
+      overflow: auto;
+      height: 100%;
+      width: 50%;
+      margin-right: 15px;
+
+      .card-vans {
+        height: 200px;
+        width: auto;
+        margin: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        transition: 0.4s ease-in;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        &:hover {
+          transform: scale(0.98);
+          transition: 0.4s ease-in;
+        }
+
+        .img-van {
+          height: 100%;
+          width: 200px;
+          background-position: center;
+          background-size: cover;
+        }
+
+        .info-van {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px;
+
+          .info-van-left {
+            height: 100%;
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 8px;
+
+            .van-model {
+              margin: 0;
+            }
+
+             .van-price {
+              padding: 8px 16px;
+              margin: 0;
+              color: $color-1;
+              border: 1px solid $color-1;
+              border-radius: 8px;
+              text-decoration: none;
+            }
+          }
+          .info-van-right {
+            height: 100%;
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-direction: column;
+            padding: 8px;
+
+            .van-show {
+              padding: 8px 16px;
+              margin: 0;
+              background-color: $color-1;
+              color: $vert;
+              border: 1px solid $color-1;
+              border-radius: 8px;
+              text-decoration: none;
+              transition: 0.4s ease-in;
+
+              &:hover {
+                background-color: $vert;
+                color: $color-1;
+                border: 1px solid $color-1;
+                transition: 0.4s ease-in;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .container-map {
+      top: 0;
+      position: sticky;
+      height: 100%;
+      width: 50%;
+      background-color: sandybrown;
+      margin-left: 15px;
+
+    }
+  }
+}
