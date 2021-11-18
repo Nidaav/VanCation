@@ -117,7 +117,7 @@ Conçu pour sillonner les contrées en toute autonomie et toute discrétion grâ
 La plupart des barrières de limitation de stationnement ou les petites routes sinueuses des petits villages de montagne ne sont pas un problème.", price: 120, address: "Montpellier")
 file = File.open("#{Rails.root}/db/fixtures/images/van4.jpg")
 van4.photos.attach(io: file, filename: "van4.png", content_type: 'image/png')
-file = File.open("#{Rails.root}/db/fixtures/images/int4.jpeg")
+file = File.open("#{Rails.root}/db/fixtures/images/int4.png")
 van4.photos.attach(io: file, filename: "int4.png", content_type: 'image/png')
 van4.save!
 
@@ -149,7 +149,7 @@ van6.photos.attach(io: file, filename: "int6.png", content_type: 'image/png')
 van6.save!
 
 puts "Van 7..."
-van7 = Van.new( user_id: user7.id, model: "Mercedes Benz Vclass", capacity: 5, description: "Aucun autre van n illustre aussi bien le concept de liberté.
+van7 = Van.new( user_id: user7.id, model: "Mercedes Benz", capacity: 5, description: "Aucun autre van n illustre aussi bien le concept de liberté.
 Véhicule entièrement modulable en quelques minutes.
 En famille , entre amis ou un petit weekend en amoureux, le Mercedes Benz Vclass n attend plus que vous.", price: 100, address: "Lyon")
 file = File.open("#{Rails.root}/db/fixtures/images/van7.jpg")
@@ -159,7 +159,7 @@ van7.photos.attach(io: file, filename: "int7.png", content_type: 'image/png')
 van7.save!
 
 puts "Van 8..."
-van8 = Van.new( user_id: user8.id, model: "Volskwagen VWBus", capacity: 5, description: "Véhicule disposant de 4 places assises, en parfait état mécanique, autoradio, direction assistée, faible consommation de gazoil. Révision Août 2021.  Van très bien équipé : Kitchenette avec vaisselle pour 4, frigo, douche chaude avec grande réserve d'eau (70l), toilette chimique portatif, tente isoloir, table, chaises pliantes, nombreux rangements. Batterie de servitude dédiée à la recharge de vos équipements électroniques et des equipements de la cellule du Van. La tente de toit vous offrira des vues imprenables grâce à ses ouvrants sur vos spots.", price: 170, address: "Lille")
+van8 = Van.new( user_id: user8.id, model: "Volskwagen VW", capacity: 5, description: "Véhicule disposant de 4 places assises, en parfait état mécanique, autoradio, direction assistée, faible consommation de gazoil. Révision Août 2021.  Van très bien équipé : Kitchenette avec vaisselle pour 4, frigo, douche chaude avec grande réserve d'eau (70l), toilette chimique portatif, tente isoloir, table, chaises pliantes, nombreux rangements. Batterie de servitude dédiée à la recharge de vos équipements électroniques et des equipements de la cellule du Van. La tente de toit vous offrira des vues imprenables grâce à ses ouvrants sur vos spots.", price: 170, address: "Lille")
 file = File.open("#{Rails.root}/db/fixtures/images/van8.jpg")
 van8.photos.attach(io: file, filename: "van8.png", content_type: 'image/png')
 file = File.open("#{Rails.root}/db/fixtures/images/int8.jpeg")
@@ -167,7 +167,7 @@ van8.photos.attach(io: file, filename: "int8.png", content_type: 'image/png')
 van8.save!
 
 puts "Van 9..."
-van9 = Van.new( user_id: user9.id, model: "Nissan NV350 Caravane", capacity: 3, description: "Ce van a reçu un aménagement d'usine par la société Stylevan (acteur majeur de l'aménagement en France)
+van9 = Van.new( user_id: user9.id, model: "Nissan NV350", capacity: 3, description: "Ce van a reçu un aménagement d'usine par la société Stylevan (acteur majeur de l'aménagement en France)
 Si tu sélectionnes mon van, tu auras un van 4 places en version longue (5.2m donc de la place) ayant les équipements suivants: une cuisine (avec réfrigérateur, gazinière et évier), un toit relevable, des sièges avant pivotants, un store.", price: 70, address: "Bordeaux")
 file = File.open("#{Rails.root}/db/fixtures/images/van9.jpg")
 van9.photos.attach(io: file, filename: "van9.png", content_type: 'image/png')

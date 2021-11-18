@@ -23,7 +23,7 @@ require("channels")
 // ----------------------------------------------------
 
 // External imports
-// import "bootstrap";
+import "bootstrap";
 import { toggleClassActiveOnNavbar } from '../components/_navbar'
 import { initMapbox } from '../components/_initMapBox'
 import { animationMarker } from '../components/_animationMarker'

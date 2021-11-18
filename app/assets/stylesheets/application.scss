@@ -11,7 +11,9 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/van_show";
 @import "pages/index";
+
 @import "flatpickr/dist/flatpickr";
 @import "flatpickr/dist/themes/material_green";
 body {
