@@ -1,37 +1,121 @@
 .container-booking {
-  margin: 0 auto;
-  padding: 50px;
-  width: 90%;
   height: auto;
+  width: 80%;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  h1 {
-    text-align: center;
-  }
-
-  ul {
+  .box-d-flex {
     margin: 0 auto;
-    background-color: $color-1;
-    padding: 10px;
-    width: 30%;
-    border-radius: 20px;
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-template-columns: 500px 500px;
+    gap: 10px 10px;
 
-    .li-img {
+    .box {
+      height: 300px;
+      width: 500px;
 
-      background-color: $color-1;
-      .img-van {
-        border-radius: 8px 8px 0 0px;
-        background-size: cover;
+      .img-container-booking {
+        height: 100%;
         width: 100%;
-      }
-    }
+        position: relative;
+        transition: 1s ease-in;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
-    li {
-      background-color: $color-3;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      border-radius: 0px 0px 8px 8px;
+        &:hover .img-booking-effect {
+          height: 60%;
+          border-radius: 0 0px 20px 20px;
+          transition: 0.5s ease-in;
+
+          .booking-capacity, .booking-description, .booking-price, .review-van {
+            transition: opacity 1.5s ease-in;
+            opacity: 1;
+          }
+        }
+
+        &:hover .img-van {
+          opacity: 0.7;
+          transition: 1s ease-in;
+          transform: scale(1.1);
+        }
+
+        .img-van {
+          transition: 1s ease-in;
+        }
+
+        .img-booking-effect {
+          transition: 1s ease-in;
+          height: 22%;
+          width: 100%;
+          background-color: $color-1;
+          padding: 25px;
+          opacity: 1;
+          position: absolute;
+          top: 0;
+          display: flex;
+          justify-content: space-between;
+
+          .review-van {
+            background-color: $vert;
+            padding: 8px 16px;
+            color: $color-1;
+            text-decoration: none;
+            border: 1px solid $vert;
+            border-radius: 8px;
+            transition: 0.5s ease-in;
+
+            &:hover {
+              background-color: $color-1;
+              border: 1px solid $vert;
+              color: $vert;
+              transition: 0.5s ease-in;
+            }
+          }
+
+          .booking-title {
+            color: $color-3;
+            opacity: 1;
+          }
+
+          .booking-capacity, .booking-description, .booking-price, .review-van {
+            opacity: 0;
+            transition: opacity 0.2s ease-in;
+          }
+
+          p {
+            color: $color-3;
+          }
+
+          .left-info-booking {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+          }
+
+          .right-info-booking {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+          }
+
+          .booking-price {
+            margin: 0;
+            border: 1px solid $color-3;
+            padding: 8px 16px;
+            width: 100px;
+            text-align: center;
+            border-radius: 8px;
+          }
+        }
+      }
     }
   }
 }

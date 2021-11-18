@@ -1,18 +1,28 @@
 <div class="container-booking">
-  <h1>Your bookings</h1>
+  <div class="box-d-flex">
     <% @bookings.each do |booking| %>
-      <ul>
-        <li class="li-img">
-          <%= cl_image_tag(booking.van.photos.first.key, width: 400, crop: :fill, class: "img-van") %>
-        </li>
-        <li>
-          <h4><%= booking.van.model %></h4>
-          <p><%= booking.van.capacity %> places</p>
-          <p><%= booking.van.description %></p>
-          <p><%= booking.price_total %> €</p>
-          <%= booking.starts_at.strftime("From %d/%m/%Y") %>
-          <%= booking.ends_at.strftime("to %d/%m/%Y")  %>
-        </li>
-      </ul>
-      <% end %>
+      <div class="box">
+        <div class="img-container-booking">
+          <%= cl_image_tag(booking.van.photos.first.key, height: 300, width: 500, crop: :fill, class: "img-van") %>
+          <div class="img-booking-effect">
+            <div class="left-info-booking">
+              <h4 class="booking-title"><%= booking.van.model %></h4>
+              <p class="booking-capacity"><%= booking.van.capacity %> places</p>
+              <%= link_to 'Back to this van', van_path(booking.van), class: "review-van"%>
+            </div>
+            <div class="right-info-booking">
+              <p class="booking-date">
+                <%= booking.starts_at.strftime("From %d/%m/%Y") %>
+                <%= booking.ends_at.strftime("to %d/%m/%Y")  %>
+              </p>
+              <p class="booking-price"><%= booking.price_total %> €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
+
+
+<%# https://www.sharemycode.fr/wen %>

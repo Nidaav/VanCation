@@ -9,6 +9,11 @@ class BookingsController < ApplicationController
   end
 
   def accept
+    @booking.status = "Accepted <i class='fas fa-check'></i>"
+  end
+
+  def decline
+    @booking.status = "Declined <i class='fas fa-times'></i>"
   end
 
   def create

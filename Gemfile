@@ -6,6 +6,8 @@ ruby '2.7.4'
 gem 'greensock-rails'
 gem 'simple_form'
 
+
+gem 'geocoder'
 gem 'rails', '~> 6.0.4', '>= 6.0.4.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
