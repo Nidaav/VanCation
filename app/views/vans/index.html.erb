@@ -2,24 +2,28 @@
   <div class="container-d-flex">
     <div class="container-vans">
       <% @vans.each do |van| %>
-        <div class="card-vans">
+        <div class="card-vans" data-van-id="<%= van.id %>">
           <div class="img-van">
             <%= cl_image_tag(van.photos.first.key, height: 200, width: 200, crop: :fill, class: "img-van") %>
           </div>
           <div class="info-van">
             <div class="info-van-left">
               <h3 class="van-model"><%= van.model %></h3>
+              <p class="van-capacity"><%= van.address %></p>
               <p class="van-capacity"><%= van.capacity %> places</p>
               <p class="van-price"><%= van.price %> € / jour</p>
             </div>
             <div class="info-van-right">
-              <%= link_to("View now", van_path(van),  class: "van-show") %>
+              <p class="van-capacity"><%= van.address %></p>
+              <%= link_to("Voir les détails", van_path(van),  class: "van-show") %>
             </div>
           </div>
         </div>
       <% end %>
     </div>
-    <div class="container-map">
+    <div id="container-map" style="width: 50%; height: 100%;"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
 </div>

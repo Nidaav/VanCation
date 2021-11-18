@@ -50,7 +50,7 @@
       padding: 0 16px;
       border-radius: 20px;
       height: 50px;
-      width: 150px;
+      width: 180px;
       background-color: $vert;
       transition: .4s ease-in-out;
       position: relative;
@@ -72,13 +72,14 @@
           position: absolute;
           top: 60px;
           left: 0px;
-          width: 150px;
+          width: 180px;
           display: flex;
           align-items: center;
           flex-direction: column;
           border: 1px solid $vert;
           background-color: $color-1;
           border-radius: 8px;
+          z-index: 100;
 
           .deconection {
             border-top: 1px solid $color-3;
@@ -86,7 +87,7 @@
 
           .item-log {
             height: auto;
-            width: 150px;
+            width: 180px;
             text-align: start;
             display: flex;
             align-items: center;

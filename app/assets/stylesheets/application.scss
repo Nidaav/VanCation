@@ -7,13 +7,15 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "mapbox-gl/dist/mapbox-gl";
 
 // Your CSS partials
 @import "components/index";
 @import "components/van_show";
 @import "pages/index";
 
-
+@import "flatpickr/dist/flatpickr";
+@import "flatpickr/dist/themes/material_green";
 body {
   height: 100vh;
   overflow-y: hidden;
@@ -25,5 +27,6 @@ body {
     height: auto;
     margin: 0 auto;
     width: 100%;
+    background-image: image-url('background.svg');
   }
 }
