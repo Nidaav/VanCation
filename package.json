@@ -10,6 +10,7 @@
     "flatpickr": "^4.6.9",
     "gsap": "^3.8.0",
     "jquery": "^3.6.0",
+    "mapbox-gl": "^2.6.0",
     "popper.js": "^1.16.1",
     "turbolinks": "^5.2.0"
   },

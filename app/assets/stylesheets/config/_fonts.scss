@@ -3,14 +3,18 @@
 
 @font-face {
   font-family: "font-1";
-  src: url(../../fonts/NB-International-Pro-Light.woff);
+  src: font-url("KronaOne-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "font-2";
+  src: font-url("NB-International-Pro-Light.woff");
 }
 
 
-$body-font: "font-1", sans-serif;
+$font-1: "font-2", serif;
 $font-2: "font-2", serif;
 // Define fonts for body and headers
-$headers-font: "Nunito", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
