@@ -6,8 +6,8 @@
     <ul class="nav-items">
       <li class="item"><%= link_to 'HOME', root_path, class: "btn-nav"%></li>
       <li class="item"><%= link_to 'EXPLORE', vans_path, class: "btn-nav"%></li>
-      <li class="item"><%= link_to '', "#TODO", class: "btn-nav"%></li>
-      <li class="item"><%= link_to '', "#TODO", class: "btn-nav"%></li>
+      <li class="item"><%= link_to 'RENT YOUR VAN', new_van_path, class: "btn-nav"%></li>
+      <li class="item"><%= link_to 'HOW DOES IT WORK ?', root_path, class: "btn-nav"%></li>
     </ul>
   </div>
   <div class="right">
@@ -24,10 +24,16 @@
             </div>
           <% else %>
             <div class="bookings item-log">
+              <%= link_to 'My profile', bookings_path, class: "btn-log"%>
+            </div>
+            <div class="bookings item-log">
               <%= link_to 'My bookings', bookings_path, class: "btn-log"%>
             </div>
+            <div class="bookings item-log">
+              <%= link_to 'Rent your van', bookings_path, class: "btn-log"%>
+            </div>
             <div class="deconection item-log">
-              <%= link_to 'Deconection', destroy_user_session_path, method: :delete ,class: "btn-log"%>
+              <%= link_to 'Déconnexion', destroy_user_session_path, method: :delete ,class: "btn-log"%>
             </div>
           <% end %>
         </div>

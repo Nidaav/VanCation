@@ -1,0 +1,18 @@
+
+<div class="container-booking">
+  <h1>Your rentals</h1>
+    <% @rentals.each do |booking| %>
+      <ul>
+        <li class="li-img">
+          <%= cl_image_tag(booking.van.photos.first.key, width: 400, crop: :fill, class: "img-van") %>
+        </li>
+        <li>
+          <h4><%= booking.van.model %></h4>
+          <p>Rented by <%= booking.user.first_name %></p>
+          <p> <%= booking.user.accept %></p>
+          <%= booking.starts_at.strftime("From %d/%m/%Y") %>
+          <%= booking.ends_at.strftime("to %d/%m/%Y")  %>
+        </li>
+      </ul>
+      <% end %>
+</div>
