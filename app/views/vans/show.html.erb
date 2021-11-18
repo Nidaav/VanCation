@@ -1,9 +1,43 @@
-<
-      <%= cl_image_tag(@van.photos.first.key, width: 600, crop: :fill) %>
+<div class="container-show">
+  <div class="left">
+    <div class="show-header">
+      <h1><%= @van.model %></h1>
+      <h2>📍<%= @van.address %></h2>
+    </div>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <% @van.photos.each_with_index do |photo, index| %>
+          <div class="carousel-item <%= "active" if index == 0%>">
+            <%= cl_image_tag(photo.key, class: "d-block w-100 show-image") %>
+          </div>
+        <% end %>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="info-header">
+    <h3><%= @van.user.first_name %> <%= @van.user.last_name %></h3>
+    <%= cl_image_tag(@van.user.photo.key, width: 65, height: 65, class: "avatar-show") %>
+    </div>
+    <div class="price-van-show">
+    <h3>👤  <%= @van.capacity %> personnes</h3>
+    <h3>💰  <%= @van.price %> €/jour</span> </h3>
+    </div>
+    <div class="desc-show">
+    <p><%= @van.description %></p>
+    </div>
+  </div>
+
+  <div class="right">
+
+  </div>
 
 
-      <%= link_to("Book now", new_van_booking_path(@van)) %>
-      <%= @van.capacity %>places
-      <%= @van.price %>€/jour
-      <h4><%= @van.model %></h4>
-      <p><%= @van.description %></p>
+
+</div>

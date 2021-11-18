@@ -23,7 +23,7 @@ require("channels")
 // ----------------------------------------------------
 
 // External imports
-// import "bootstrap";
+import "bootstrap";
 import { toggleClassActiveOnNavbar } from '../components/_navbar'
 
 // Internal imports, e.g:
