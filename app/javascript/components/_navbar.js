@@ -10,7 +10,7 @@ const toggleClassActiveOnNavbar = () => {
     console.log(logDisplay.style.display)
     if (logDisplay.style.display === "none") {
       logDisplay.style.display = 'block';
-      TweenMax.from(".log-d-flex", 1, {
+      TweenMax.from(".log-d-flex", 0.4, {
         delay: 0,
         opacity: 0,
         y: -80,
