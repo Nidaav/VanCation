@@ -9,11 +9,12 @@
           <div class="info-van">
             <div class="info-van-left">
               <h3 class="van-model"><%= van.model %></h3>
+              <p class="van-capacity"><%= van.address %></p>
               <p class="van-capacity"><%= van.capacity %> places</p>
               <p class="van-price"><%= van.price %> € / jour</p>
             </div>
             <div class="info-van-right">
-              <%= link_to("View now", van_path(van),  class: "van-show") %>
+              <%= link_to("Voir les détails", van_path(van),  class: "van-show") %>
             </div>
           </div>
         </div>

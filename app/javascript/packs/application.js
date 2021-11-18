@@ -25,6 +25,7 @@ require("channels")
 // External imports
 // import "bootstrap";
 import { toggleClassActiveOnNavbar } from '../components/_navbar'
+import { initFlatpickr } from "../plugins/flatpickr";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -32,5 +33,6 @@ import { toggleClassActiveOnNavbar } from '../components/_navbar'
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initFlatpickr();
   toggleClassActiveOnNavbar();
 });

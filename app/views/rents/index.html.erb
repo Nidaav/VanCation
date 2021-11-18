@@ -9,7 +9,18 @@
         <li>
           <h4><%= booking.van.model %></h4>
           <p>Rented by <%= booking.user.first_name %></p>
-          <p> <%= booking.user.accept %></p>
+          <% if booking.status == "Pending" %>
+            <p> En attente</p>
+            <%= link_to "Accepter", accept_booking_path(booking), method: :patch %>
+            <%= link_to "Refuser", decline_booking_path(booking), method: :patch %>
+          <% elsif booking.status == "Accepted" %>
+            <p> Accepté <i class='fas fa-check'></i></p>
+          <% elsif booking.status == "Cancelled" %>
+            <p> Annulé <i class='fas fa-times'></i></p>
+          <% else %>
+            <p> Refusé <i class='fas fa-times'></i></p>
+          <% end %>
+
           <%= booking.starts_at.strftime("From %d/%m/%Y") %>
           <%= booking.ends_at.strftime("to %d/%m/%Y")  %>
         </li>
