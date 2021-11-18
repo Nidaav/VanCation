@@ -27,6 +27,7 @@
         display: inline-block;
         margin: 0 20px;
         transition: .4s;
+        font-family: $font-1;
 
           &:hover {
             transform: scale(1.2);
@@ -51,7 +52,8 @@
       border-radius: 20px;
       height: 50px;
       width: 180px;
-      background-color: $vert;
+      background-color: $color-1;
+      border: 1px solid $vert;
       transition: .4s ease-in-out;
       position: relative;
 
@@ -61,10 +63,8 @@
         // }
 
       .fas {
-        color: $color-1;
-        margin-right: 8px;
+        color: $vert;
         cursor: pointer;
-
       }
 
       .log {
@@ -120,7 +120,11 @@
         height: 30px;
         width: 30px;
         background-color: $color-1;
-        margin-left: 8px;
+      }
+
+      .user_name {
+        color: $vert;
+        margin: 0;
       }
     }
   }

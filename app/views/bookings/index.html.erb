@@ -17,15 +17,15 @@
               </p>
 
               <% if booking.status == "Pending" %>
-                <p> En attente</p>
+                <p class="status-booking"> En attente</p>
                 <%= link_to "Annuler", cancel_booking_path(booking), method: :patch, class: "review-van" %>
 
               <% elsif booking.status == "Accepted" %>
-                <p> Accepté <i class='fas fa-check'></i></p>
+                <p class="status-booking"> Accepté <i class='fas fa-check'></i></p>
               <% elsif booking.status == "Cancelled" %>
-                <p> Annulé <i class='fas fa-times'></i></p>
+                <p class="status-booking"> Annulé <i class='fas fa-times'></i></p>
               <% else %>
-                <p> Refusé <i class='fas fa-times'></i></p>
+                <p class="status-booking"> Refusé <i class='fas fa-times'></i></p>
               <% end %>
               <p class="booking-price"><%= booking.price_total %> €</p>
             </div>

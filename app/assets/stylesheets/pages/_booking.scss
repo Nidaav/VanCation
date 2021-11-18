@@ -31,7 +31,7 @@
           border-radius: 0 0px 20px 20px;
           transition: 0.5s ease-in;
 
-          .booking-capacity, .booking-description, .booking-price, .review-van {
+          .booking-capacity, .booking-description, .booking-price, .review-van, .status-booking {
             transition: opacity 1.5s ease-in;
             opacity: 1;
           }
@@ -81,7 +81,7 @@
             opacity: 1;
           }
 
-          .booking-capacity, .booking-description, .booking-price, .review-van {
+          .booking-capacity, .booking-description, .booking-price, .review-van, .status-booking {
             opacity: 0;
             transition: opacity 0.2s ease-in;
           }

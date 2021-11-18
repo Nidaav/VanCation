@@ -7,7 +7,6 @@
       <li class="item"><%= link_to 'ACCUEIL', root_path, class: "btn-nav"%></li>
       <li class="item"><%= link_to 'EXPLORER', vans_path, class: "btn-nav"%></li>
       <li class="item"><%= link_to 'LOUER VOTRE VAN', new_van_path, class: "btn-nav"%></li>
-      <li class="item"><%= link_to 'COMMENT CA MARCHE ?', "#lessvg", class: "btn-nav"%></li>
     </ul>
   </div>
   <div class="right">
@@ -42,6 +41,7 @@
         </div>
       </div>
       <% if current_user %>
+        <p class="user_name"><%= current_user.first_name %></p>
         <%= cl_image_tag(current_user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar") %>
       <% end %>
     </div>
