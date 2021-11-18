@@ -1,17 +1,9 @@
-<div class="van_card">
-  <div class="info_section">
-    <div class="van_header">
-      <%= cl_image_tag(@van.photos.first.key, width: 200, height: 100, crop: :fill, class: "image_show_van") %>
-      <h1><%= @van.model %></h1>
-      <span class="price"><%= @van.price %>€/jour</span>
-      <p class="type"><%= @van.capacity %>places</p>
-    </div>
+<
+      <%= cl_image_tag(@van.photos.first.key, width: 600, crop: :fill) %>
 
-    <div class="van_desc">
-      <p class="text"><%= @van.description %></p>
-    </div>
-    <div>
-      <%= link_to("Book now", new_van_booking_path(@van), { class: "button-view-details"}) %>
-    </div>
-  </div>
-</div>
+
+      <%= link_to("Book now", new_van_booking_path(@van)) %>
+      <%= @van.capacity %>places
+      <%= @van.price %>€/jour
+      <h4><%= @van.model %></h4>
+      <p><%= @van.description %></p>
