@@ -21,12 +21,14 @@
 
       h1 {
         font-size: 9rem;
-        color: $color-1;
+        color: $vert;
+        margin-bottom: 50px;
       }
 
       p {
         font-size: 2rem;
-        color: $color-3;
+        color: $vert;
+        margin-bottom: 50px;
       }
     }
 
@@ -34,15 +36,15 @@
       text-align: start;
       padding: 16px 24px;
       margin: 5px;
-      border-radius: 8px;
+      border-radius: 16px;
       text-decoration: none;
-      transition: 0.5s ease-in;
+      transition: 0.2s ease-in;
 
       &:hover {
         background-color: $color-1;
         border: 1px solid $vert;
         color: $vert;
-        transition: 0.5s ease-in;
+        transition: 0.2s ease-in;
       }
     }
 
@@ -54,6 +56,8 @@
     .all-vans {
       background-color: $vert;
       color: $color-1;
+      font-size: 1.25rem;
+      font-weight: 600;
     }
   }
 

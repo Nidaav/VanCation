@@ -12,7 +12,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
+@import "flatpickr/dist/flatpickr";
+@import "flatpickr/dist/themes/material_green";
 body {
   height: 100vh;
   overflow-y: hidden;

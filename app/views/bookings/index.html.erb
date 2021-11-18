@@ -8,13 +8,25 @@
             <div class="left-info-booking">
               <h4 class="booking-title"><%= booking.van.model %></h4>
               <p class="booking-capacity"><%= booking.van.capacity %> places</p>
-              <%= link_to 'Back to this van', van_path(booking.van), class: "review-van"%>
+              <%= link_to 'Revoir ce van', van_path(booking.van), class: "review-van"%>
             </div>
             <div class="right-info-booking">
               <p class="booking-date">
                 <%= booking.starts_at.strftime("From %d/%m/%Y") %>
                 <%= booking.ends_at.strftime("to %d/%m/%Y")  %>
               </p>
+
+              <% if booking.status == "Pending" %>
+                <p> En attente</p>
+                <%= link_to "Annuler", cancel_booking_path(booking), method: :patch, class: "review-van" %>
+
+              <% elsif booking.status == "Accepted" %>
+                <p> Accepté <i class='fas fa-check'></i></p>
+              <% elsif booking.status == "Cancelled" %>
+                <p> Annulé <i class='fas fa-times'></i></p>
+              <% else %>
+                <p> Refusé <i class='fas fa-times'></i></p>
+              <% end %>
               <p class="booking-price"><%= booking.price_total %> €</p>
             </div>
           </div>
