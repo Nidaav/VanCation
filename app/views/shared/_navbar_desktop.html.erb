@@ -38,7 +38,9 @@
           <% end %>
         </div>
       </div>
-      <div class="avatar"></div>
+      <% if current_user %>
+        <%= cl_image_tag(current_user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar") %>
+      <% end %>
     </div>
   </div>
 </nav>

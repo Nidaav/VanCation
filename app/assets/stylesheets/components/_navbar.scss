@@ -79,6 +79,7 @@
           border: 1px solid $vert;
           background-color: $color-1;
           border-radius: 8px;
+          z-index: 100;
 
           .deconection {
             border-top: 1px solid $color-3;
