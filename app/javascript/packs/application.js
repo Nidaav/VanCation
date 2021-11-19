@@ -27,7 +27,6 @@ import "bootstrap";
 import { toggleClassActiveOnNavbar } from '../components/_navbar'
 import { initMapbox } from '../components/_initMapBox'
 import { animationMarker } from '../components/_animationMarker'
-import { animationHome } from '../components/_homeAnimation'
 import { initFlatpickr } from "../plugins/flatpickr";
 
 // Internal imports, e.g:
@@ -37,7 +36,6 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 
-  animationHome();
   initFlatpickr();
   toggleClassActiveOnNavbar();
   initMapbox();

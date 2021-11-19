@@ -5,7 +5,6 @@ const deleteRedMarker = () => {
   });
 }
 
-
 const selectMarker = (event) => {
   deleteRedMarker();
   const cardHover = event.currentTarget
