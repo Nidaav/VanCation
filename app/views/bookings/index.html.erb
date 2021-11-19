@@ -1,4 +1,5 @@
 <div class="container-booking">
+  <h1>Mes réservations</h1>
   <div class="box-d-flex">
     <% @bookings.each do |booking| %>
       <div class="box">
@@ -8,18 +9,15 @@
             <div class="left-info-booking">
               <h4 class="booking-title"><%= booking.van.model %></h4>
               <p class="booking-capacity"><%= booking.van.capacity %> places</p>
-              <%= link_to 'Revoir ce van', van_path(booking.van), class: "review-van"%>
+              <p class="booking-price"><%= booking.price_total %> €</p>
             </div>
             <div class="right-info-booking">
               <p class="booking-date">
                 <%= booking.starts_at.strftime("From %d/%m/%Y") %>
                 <%= booking.ends_at.strftime("to %d/%m/%Y")  %>
               </p>
-
               <% if booking.status == "Pending" %>
-                <p class="status-booking"> En attente</p>
-                <%= link_to "Annuler", cancel_booking_path(booking), method: :patch, class: "review-van" %>
-
+              <p class="status-booking"> En attente</p>
               <% elsif booking.status == "Accepted" %>
                 <p class="status-booking"> Accepté <i class='fas fa-check'></i></p>
               <% elsif booking.status == "Cancelled" %>
@@ -27,7 +25,12 @@
               <% else %>
                 <p class="status-booking"> Refusé <i class='fas fa-times'></i></p>
               <% end %>
-              <p class="booking-price"><%= booking.price_total %> €</p>
+              <div class="btnflex">
+                <%= link_to 'Revoir ce van', van_path(booking.van), class: "review-van"%>
+                <% if booking.status == "Pending" %>
+                  <%= link_to "Annuler", cancel_booking_path(booking), method: :patch, class: "review-van annuler" %>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
