@@ -7,6 +7,7 @@
       <li class="item"><%= link_to 'ACCUEIL', root_path, class: "btn-nav"%></li>
       <li class="item"><%= link_to 'EXPLORER', vans_path, class: "btn-nav"%></li>
       <li class="item"><%= link_to 'LOUER VOTRE VAN', new_van_path, class: "btn-nav"%></li>
+      <li class="item"><%= link_to 'COMMENT CA MARCHE ?', root_path(anchor: "lessvg"), class: "btn-nav"%></li>
     </ul>
   </div>
   <div class="right">
@@ -34,10 +35,13 @@
             <%= link_to 'Mes réservations', bookings_path, class: "btn-log"%>
           </div>
           <div class="bookings item-log">
+            <%= link_to 'Mes locations', rents_index_path, class: "btn-log"%>
+          </div>
+          <div class="bookings item-log">
             <%= link_to 'Louez votre van', new_van_path, class: "btn-log"%>
           </div>
           <div class="bookings item-log">
-            <%= link_to "Besoin d'aide ?", bookings_path, class: "btn-log"%>
+            <%= link_to "Besoin d'aide ?", new_van_booking_path(1), class: "btn-log"%>
           </div>
           <div class="deconection item-log">
             <%= link_to 'Déconnexion', destroy_user_session_path, method: :delete ,class: "btn-log"%>
