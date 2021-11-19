@@ -66,7 +66,7 @@ Dispose de tout le confort d'un van aménagé tout en restant en dessous des 2m 
 - Isolation thermique et phonique recouverte de lambris
 - Banquette avec table amovible, convertible en grand lit 160x190
 - Nombreux rangements dans les meubles mais également aux murs avec pose de filets
-- Rideaux occultants hayon et vitre côté (un rideau séparant la cabine de l'arrière du véhicule sera posé fin juin)", price: 100, address: "Rennes")
+- Rideaux occultants hayon et vitre côté (un rideau séparant la cabine de l'arrière du véhicule sera posé fin juin)", price: 100, address: "Strasbourg")
 file = File.open("#{Rails.root}/db/fixtures/images/van1.jpg")
 van1.photos.attach(io: file, filename: "van1.png", content_type: 'image/png')
 file = File.open("#{Rails.root}/db/fixtures/images/int1.jpeg")
@@ -108,13 +108,13 @@ van3.photos.attach(io: file, filename: "int3.png", content_type: 'image/png')
 van3.save!
 
 puts "Van 4..."
-van4 = Van.new( user_id: user4.id, model: "Ford", capacity: 4, description: "Bonjour,
+van4 = Van.new( user_id: user4.id, model: "Volkswagen", capacity: 4, description: "Bonjour,
 Ce van vous permettra de partir directement en toute autonomie, il est équipé de 2 couchages doubles, de 2 feux de cuisson, d'un évier + réserve d'eau, d'un réfrigérateur, de la climatisation, d'une douchette à l'arrière, d'un chauffage stationnaire pour les nuits fraiches et de vaisselle et ustensiles pour la préparation de repas basiques…
 Un auvent situé au-dessus de la porte latérale coulissante vient agrandir l'espace de vie pour éventuellement abriter la table amovible et les chaises et tabourets pliants astucieusement intégrés dans l'habillage de la porte coulissante et du hayon arrière.
 Le véhicule est dans un état neuf et il se conduit comme une voiture, passe sous les portiques de 2,00 mètres (tarif voiture sur autoroute) et consomme en moyenne 8 l/100 kms...
 Le California Coast T6 ( boite automatique) est le campervan moderne de référence, issu du savoir-faire historique de Volkswagen qui inventa le voyage en van aménagé il y a plus de 60 ans.
 Conçu pour sillonner les contrées en toute autonomie et toute discrétion grâce à son petit gabarit, il vous offre la possibilité de voyager et passer la nuit où bon vous semble...
-La plupart des barrières de limitation de stationnement ou les petites routes sinueuses des petits villages de montagne ne sont pas un problème.", price: 120, address: "Montpellier")
+La plupart des barrières de limitation de stationnement ou les petites routes sinueuses des petits villages de montagne ne sont pas un problème.", price: 110, address: "Rennes")
 file = File.open("#{Rails.root}/db/fixtures/images/van4.jpg")
 van4.photos.attach(io: file, filename: "van4.png", content_type: 'image/png')
 file = File.open("#{Rails.root}/db/fixtures/images/int4.png")
@@ -122,13 +122,13 @@ van4.photos.attach(io: file, filename: "int4.png", content_type: 'image/png')
 van4.save!
 
 puts "Van 5..."
-van5 = Van.new( user_id: user5.id, model: "Bedford Beagle", capacity: 4, description: "Je me présente, Mathias, amoureux des voyages et des grands espaces. Je suis quelqu'un de précautionneux et attentionné pour mon Jules Verne et j'espère qu'il vous conduira où bon vous semble avec un maximum de confort.
+van5 = Van.new( user_id: user10.id, model: "Mercedes", capacity: 4, description: "Je me présente, Jules, amoureux des voyages et des grands espaces. Je suis quelqu'un de précautionneux et attentionné pour mon Jules Verne et j'espère qu'il vous conduira où bon vous semble avec un maximum de confort.
 
 À vous la liberté ! Le Mercedes Jules Verne est tout ce dont vous pouvez rêver dans un van avec un maximum de confort, fonctionnalité, efficacité pour rendre votre voyage inoubliable. Il est le seul équipé de toilette, douche et eau chaude !
 
 A bord, le salon s'articule autour d'une banquette en L, rarissime dans la catégorie des vans à toits relevables. La kitchenette haut-de-gamme offre un confort maximal avec une plaque de cuisson deux feux, un évier et un grand réfrigérateur de 51L. Vous pourrez vous reposer ou dormir sur le grand lit toit de 1,90 x 1,17 et le relever pour profiter ensuite de la partie habitation en étant debout ! Le van offre l'avantage de pouvoir passer sous les barres de parkings et de passer en catégorie 1 aux péages.
 
-Ce n'est pas fini, il offre également tout le confort d'un camping car avec une douche intérieur et exterieur ainsi que des toilettes fixes au niveau de la partie arrière. Seuls les Jules Verne et Kepler offrent cette possibilité ! ", price: 150, address: "Strasbourg")
+Ce n'est pas fini, il offre également tout le confort d'un camping car avec une douche intérieur et exterieur ainsi que des toilettes fixes au niveau de la partie arrière. Seuls les Jules Verne et Kepler offrent cette possibilité ! ", price: 170, address: "Chantepie")
 file = File.open("#{Rails.root}/db/fixtures/images/van5.jpg")
 van5.photos.attach(io: file, filename: "van5.png", content_type: 'image/png')
 file = File.open("#{Rails.root}/db/fixtures/images/int5.jpeg")
@@ -176,7 +176,7 @@ van9.photos.attach(io: file, filename: "int9.png", content_type: 'image/png')
 van9.save!
 
 puts "Van 10..."
-van10 = Van.new( user_id: user10.id, model: "Morris J4", capacity: 4, description: "Nous louons notre Karl au week-end ou à la semaine au départ de Paris. Nous l'avons équipé et décoré nous-même. Ce van de 1985 roule à max 105km/h (en descente) avec une vitesse de croisière à 80km/h. Il est équipé d'un moteur 1.6 Diesel. Il est en très bon état et tout équipé.
+van10 = Van.new( user_id: user5.id, model: "Morris J4", capacity: 4, description: "Nous louons notre Karl au week-end ou à la semaine au départ de Paris. Nous l'avons équipé et décoré nous-même. Ce van de 1985 roule à max 105km/h (en descente) avec une vitesse de croisière à 80km/h. Il est équipé d'un moteur 1.6 Diesel. Il est en très bon état et tout équipé.
 
 Avec son 1m95 de hauteur, il vous permet un accès à tous les parkings et spots interdits aux camping-cars traditionnels. Vous trouverez une cuisinière gaz, un évier avec ses réserves d’eau (20L), une couette et oreillers pour 2 personnes, une douche solaire, 2 chaises et 2 tables (intérieur et extérieur) ainsi que de nombreux rangements pour vos affaires personnelles. ", price: 135, address: "Toulouse")
 file = File.open("#{Rails.root}/db/fixtures/images/van10.jpg")
@@ -185,9 +185,16 @@ file = File.open("#{Rails.root}/db/fixtures/images/int10.jpeg")
 van10.photos.attach(io: file, filename: "int10.png", content_type: 'image/png')
 van10.save!
 
-Booking.create!(user_id: user1.id, van_id: van1.id, starts_at: 8.days.ago, ends_at: 3.days.ago, price_total: 540, status: "accepted")
-Booking.create!(user_id: user2.id, van_id: van2.id, starts_at: 10.days.ago, ends_at: 6.days.ago, price_total: 480, status: "declined")
-Booking.create!(user_id: user5.id, van_id: van5.id, starts_at: 20.days.from_now, ends_at: 30.days.from_now, price_total: 1500, status: "pending")
-Booking.create!(user_id: user6.id, van_id: van6.id, starts_at: 10.days.from_now, ends_at: 15.days.from_now, price_total: 750, status: "pending")
-Booking.create!(user_id: user7.id, van_id: van7.id, starts_at: 15.days.from_now, ends_at: 22.days.from_now, price_total: 700, status: "pending")
-Booking.create!(user_id: user8.id, van_id: van8.id, starts_at: 45.days.from_now, ends_at: 55.days.from_now, price_total: 1700, status: "pending")
+booking1 = Booking.create!(user_id: user9.id, van_id: van4.id, starts_at: 8.days.ago, ends_at: 3.days.ago, price_total: 540, status: "accepted")
+booking2 = Booking.create!(user_id: user8.id, van_id: van5.id, starts_at: 10.days.ago, ends_at: 6.days.ago, price_total: 480, status: "declined")
+booking3 = Booking.create!(user_id: user7.id, van_id: van4.id, starts_at: 20.days.from_now, ends_at: 30.days.from_now, price_total: 1500, status: "pending")
+booking4 = Booking.create!(user_id: user3.id, van_id: van5.id, starts_at: 10.days.from_now, ends_at: 15.days.from_now, price_total: 750, status: "pending")
+booking5 = Booking.create!(user_id: user5.id, van_id: van4.id, starts_at: 15.days.from_now, ends_at: 22.days.from_now, price_total: 700, status: "pending")
+booking6 = Booking.create!(user_id: user1.id, van_id: van5.id, starts_at: 45.days.from_now, ends_at: 55.days.from_now, price_total: 1700, status: "pending")
+
+Review.create!(booking_id: booking1.id, rating: 5, comment: "Notre séjour était vraiment top!! Le van est parfait! Idéal pour 4 personnes. Je recommande fortement!")
+Review.create!(booking_id: booking2.id, rating: 5, comment: "Ce van est juste exceptionnel!! ")
+Review.create!(booking_id: booking3.id, rating: 4, comment: "Très bon rapport qualité-prix")
+Review.create!(booking_id: booking4.id, rating: 4, comment: "Van au top! Il est cependant un peu petit pour un road trip à 4 personnes!")
+Review.create!(booking_id: booking5.id, rating: 5, comment: "Un van flambant neuf, Monsieur Pignon aime son van et cela se ressent!! Allez y les yeux fermés!! ")
+Review.create!(booking_id: booking6.id, rating: 3, comment: "Van très fonctionnel!! Le prix est peut être un peu élevé!")

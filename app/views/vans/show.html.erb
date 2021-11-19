@@ -1,9 +1,11 @@
 <div class="container-show">
   <div class="left">
+
     <div class="show-header">
       <h1><%= @van.model %></h1>
       <h2>📍<%= @van.address %></h2>
     </div>
+
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <% @van.photos.each_with_index do |photo, index| %>
@@ -21,13 +23,14 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+
     <div class="info-header">
     <h3><%= @van.user.first_name %> <%= @van.user.last_name %></h3>
     <%= cl_image_tag(@van.user.photo.key, width: 65, height: 65, class: "avatar-show") %>
     </div>
     <div class="price-van-show" data-price="<%= @van.price %>">
     <h3>👤  <%= @van.capacity %> personnes</h3>
-    <h3>💰  <%= @van.price %> €/jour</span> </h3>
+    <h3>    <%= @van.price %> €/jour</span> </h3>
     </div>
     <div class="desc-show">
     <p><%= @van.description %></p>
@@ -35,11 +38,10 @@
   </div>
 
   <div class="right">
-    <div class="container-login">
+    <div class="container-resa">
       <div class="form-wrapper">
         <h2>Réservation</h2>
         <%= simple_form_for [@van, @booking] do |f| %>
-    <%# ICI IL FAUDRA MODIFIER LES @ UNE FOIS DANS LA SHOW DE VANS, LES 2 PARAMETRES NE SONT PAS DEF DANS LE CONTROLLER %>
           <div class="form-inputs">
             <%= f.input :starts_at, as: :string, required: false, label: "Début le", input_html: {class: "start-datepicker", id:"initialDate", value: DateTime.now.strftime("%Y-%m-%d")} %>
             <%= f.input :ends_at, as: :string, required: false, label: "Fin le", input_html: {class: "end-datepicker", id:"endingDate", value: DateTime.tomorrow.strftime("%Y-%m-%d")} %>
@@ -48,11 +50,93 @@
           <%= check_box_tag :checkbox %>
           <%= f.label "J'accepte les conditions" %>
         <div class="form-actions">
-          <%= f.button :submit, "Réserver ce van" %>
+          <%= f.button :submit, "Réserver ce van", class: "van-btn" %>
         </div>
       <% end %>
       </div>
-    </div>
-  </div>
+      <div class="card-d-flex-review">
+        <div class="card-review">
+          <div class="left-card">
+            <div class="avatar"></div>
+            <p>Damien</p>
+          </div>
+          <div class="right-card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
+          </div>
+        </div>
+         <div class="card-review">
+          <div class="left-card">
+            <div class="avatar"></div>
+            <p>Damien</p>
+          </div>
+          <div class="right-card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
+          </div>
+        </div>
+         <div class="card-review">
+          <div class="left-card">
+            <div class="avatar"></div>
+            <p>Damien</p>
+          </div>
+          <div class="right-card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
+          </div>
+        </div>
+         <div class="card-review">
+          <div class="left-card">
+            <div class="avatar"></div>
+            <p>Damien</p>
+          </div>
+          <div class="right-card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
+          </div>
+        </div>
+         <div class="card-review">
+          <div class="left-card">
+            <div class="avatar"></div>
+            <p>Damien</p>
+          </div>
+          <div class="right-card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
 
+          </div>
+        </div>
+         <div class="card-review">
+          <div class="left-card">
+            <div class="avatar"></div>
+            <p>Damien</p>
+          </div>
+          <div class="right-card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
+
+          </div>
+        </div>
+         <div class="card-review">
+          <div class="left-card">
+            <div class="avatar"></div>
+            <p>Damien</p>
+          </div>
+          <div class="right-card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
+
+          </div>
+        </div>
+         <div class="card-review">
+          <div class="left-card">
+            <div class="avatar"></div>
+            <p>Damien</p>
+          </div>
+          <div class="right-card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul>
+    <% @van.reviews.each do |review| %>
+    <li><%= review.comment %></li>
+    <% end %>
+    </ul>
+  </div>
 </div>

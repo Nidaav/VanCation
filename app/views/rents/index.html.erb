@@ -1,4 +1,4 @@
-<div class="container-booking">
+<div class="container-rents">
   <div class="box-d-flex">
     <% @rentals.each do |booking| %>
       <div class="box">
@@ -8,7 +8,7 @@
             <div class="left-info-booking">
               <h4 class="booking-title"><%= booking.van.model %></h4>
               <p class="booking-capacity"><%= booking.van.capacity %> places</p>
-              <%= link_to 'Revoir ce van', van_path(booking.van), class: "review-van"%>
+              <p class="booking-price"><%= booking.price_total %> €</p>
             </div>
             <div class="right-info-booking">
               <p class="booking-date">
@@ -17,16 +17,25 @@
               </p>
               <% if booking.status == "Pending" %>
                 <p class="status-booking"> En attente</p>
-                <%= link_to "Annuler", cancel_booking_path(booking), method: :patch, class: "review-van" %>
-
+                <div class="btnflex">
+                  <%= link_to 'Accepté', accept_booking_path(booking), method: :patch, class: "review-van"%>
+                  <%= link_to "Refusé", decline_booking_path(booking), method: :patch, class: "review-van annuler" %>
+                </div>
               <% elsif booking.status == "Accepted" %>
                 <p class="status-booking"> Accepté <i class='fas fa-check'></i></p>
+                <div class="btnflex">
+                  <%= link_to "Annulé", cancel_booking_path(booking), method: :patch, class: "review-van annuler" %>
+                </div>
               <% elsif booking.status == "Cancelled" %>
-                <p class="status-booking"> Annulé <i class='fas fa-times'></i></p>
+                <div class="btnflex">
+                  <p class="status-booking"> Annulé <i class='fas fa-times'></i></p>
+                </div>
               <% else %>
                 <p class="status-booking"> Refusé <i class='fas fa-times'></i></p>
+                <div class="btnflex">
+                  <%= link_to "Annulé", cancel_booking_path(booking), method: :patch, class: "review-van annuler" %>
+                </div>
               <% end %>
-              <p class="booking-price"><%= booking.price_total %> €</p>
             </div>
           </div>
         </div>
