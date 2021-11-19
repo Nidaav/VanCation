@@ -55,88 +55,20 @@
       <% end %>
       </div>
       <div class="card-d-flex-review">
-        <div class="card-review">
-          <div class="left-card">
-            <div class="avatar"></div>
-            <p>Damien</p>
+        <% @van.reviews.each do |review| %>
+          <div class="card-review">
+            <div class="left-card">
+              <div class="avatar">
+                <%= cl_image_tag(review.booking.user.photo.key, height: 50, width: 50, crop: :fill, class: "review_user") %>
+              </div>
+              <p> <%= review.booking.user.first_name %> </p>
+            </div>
+            <div class="right-card">
+              <p> <%= review.comment %> </p>
+            </div>
           </div>
-          <div class="right-card">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
-          </div>
-        </div>
-         <div class="card-review">
-          <div class="left-card">
-            <div class="avatar"></div>
-            <p>Damien</p>
-          </div>
-          <div class="right-card">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
-          </div>
-        </div>
-         <div class="card-review">
-          <div class="left-card">
-            <div class="avatar"></div>
-            <p>Damien</p>
-          </div>
-          <div class="right-card">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
-          </div>
-        </div>
-         <div class="card-review">
-          <div class="left-card">
-            <div class="avatar"></div>
-            <p>Damien</p>
-          </div>
-          <div class="right-card">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
-          </div>
-        </div>
-         <div class="card-review">
-          <div class="left-card">
-            <div class="avatar"></div>
-            <p>Damien</p>
-          </div>
-          <div class="right-card">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
-
-          </div>
-        </div>
-         <div class="card-review">
-          <div class="left-card">
-            <div class="avatar"></div>
-            <p>Damien</p>
-          </div>
-          <div class="right-card">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
-
-          </div>
-        </div>
-         <div class="card-review">
-          <div class="left-card">
-            <div class="avatar"></div>
-            <p>Damien</p>
-          </div>
-          <div class="right-card">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
-
-          </div>
-        </div>
-         <div class="card-review">
-          <div class="left-card">
-            <div class="avatar"></div>
-            <p>Damien</p>
-          </div>
-          <div class="right-card">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque numquam deleniti quod facilis, eaque asperiores deserunt perferendis voluptatum inventore odit enim minima dolor. Voluptatibus exercitationem voluptatum error fugiat delectus!</p>
-
-          </div>
-        </div>
+        <% end%>
       </div>
     </div>
-    <ul>
-    <% @van.reviews.each do |review| %>
-    <li><%= review.comment %></li>
-    <% end %>
-    </ul>
   </div>
 </div>
