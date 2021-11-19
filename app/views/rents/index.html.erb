@@ -12,8 +12,8 @@
             </div>
             <div class="right-info-booking">
               <p class="booking-date">
-                <%= booking.starts_at.strftime("From %d/%m/%Y") %>
-                <%= booking.ends_at.strftime("to %d/%m/%Y")  %>
+                <%= booking.starts_at.strftime("Du %d/%m/%Y") %>
+                <%= booking.ends_at.strftime("au %d/%m/%Y")  %>
               </p>
               <% if booking.status == "Pending" %>
                 <p class="status-booking"> En attente</p>

@@ -1,18 +1,5 @@
-<div class="page-log-in">
-   <div class="container-login">
-    <div class="form-wrapper">
-    <h2>Réservation</h2>
-    <%= simple_form_for [@van, @booking] do |f| %>
-    <%# ICI IL FAUDRA MODIFIER LES @ UNE FOIS DANS LA SHOW DE VANS, LES 2 PARAMETRES NE SONT PAS DEF DANS LE CONTROLLER %>
-      <div class="form-inputs">
-      <%= f.input :starts_at, as: :string, required: false, label: "Début le", input_html: {class: "start-datepicker"} %>
-      <%= f.input :ends_at, as: :string, required: false, label: "Fin le", input_html: {class: "end-datepicker"} %>
-      </div>
-
-      <div class="form-actions">
-        <%= f.button :submit, "Réserver ce van" %>
-      </div>
-    <% end %>
-  </div>
-  </div>
+<div class="need_help">
+<h1> Non mais sérieusement, vous avez vraiment besoin d'aide ??</h1>
+<h1> Alors on arrête un peu le <strong>bullshit</strong> et on va reserver !</h1>
+<%= link_to "Voir les vans", vans_path, {class: "btn-discover"} %>
 </div>

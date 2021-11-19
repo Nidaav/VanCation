@@ -28,7 +28,7 @@
     <h3><%= @van.user.first_name %> <%= @van.user.last_name %></h3>
     <%= cl_image_tag(@van.user.photo.key, width: 65, height: 65, class: "avatar-show") %>
     </div>
-    <div class="price-van-show">
+    <div class="price-van-show" data-price="<%= @van.price %>">
     <h3>👤  <%= @van.capacity %> personnes</h3>
     <h3>    <%= @van.price %> €/jour</span> </h3>
     </div>
@@ -43,9 +43,12 @@
         <h2>Réservation</h2>
         <%= simple_form_for [@van, @booking] do |f| %>
           <div class="form-inputs">
-            <%= f.input :starts_at, as: :string, required: false, label: "Début le", input_html: {class: "start-datepicker"} %>
-            <%= f.input :ends_at, as: :string, required: false, label: "Fin le", input_html: {class: "end-datepicker"} %>
+            <%= f.input :starts_at, as: :string, required: false, label: "Début le", input_html: {class: "start-datepicker", id:"initialDate", value: DateTime.now.strftime("%Y-%m-%d")} %>
+            <%= f.input :ends_at, as: :string, required: false, label: "Fin le", input_html: {class: "end-datepicker", id:"endingDate", value: DateTime.tomorrow.strftime("%Y-%m-%d")} %>
           </div>
+          <p>Pour un total de <span class="total_price_counter"><%= @van.price %></span> €</p>
+          <%= check_box_tag :checkbox %>
+          <%= f.label "J'accepte les conditions" %>
         <div class="form-actions">
           <%= f.button :submit, "Réserver ce van", class: "van-btn" %>
         </div>

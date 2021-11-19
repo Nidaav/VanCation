@@ -24,18 +24,19 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import { toggleClassActiveOnNavbar } from '../components/_navbar'
-import { initMapbox } from '../components/_initMapBox'
-import { animationMarker } from '../components/_animationMarker'
 import { initFlatpickr } from "../plugins/flatpickr";
 
 // Internal imports, e.g:
+import { animationMarker } from '../components/_animationMarker'
+import { initMapbox } from '../components/_initMapBox'
+import { toggleClassActiveOnNavbar } from '../components/_navbar'
+import { totalPrice } from "../components/_price";
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-
+  totalPrice();
   initFlatpickr();
   toggleClassActiveOnNavbar();
   initMapbox();
