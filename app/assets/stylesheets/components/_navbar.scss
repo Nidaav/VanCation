@@ -43,11 +43,12 @@
   }
 
   .right {
+    position: relative;
 
     .container-user {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
       padding: 0 16px;
       border-radius: 20px;
       height: 50px;
@@ -55,7 +56,6 @@
       background-color: $color-1;
       border: 1px solid $vert;
       transition: .4s ease-in-out;
-      position: relative;
 
         // &:hover {
         //   transform: scale(1.12);
@@ -67,7 +67,21 @@
         cursor: pointer;
       }
 
-      .log {
+      .avatar {
+        height: 30px;
+        width: 30px;
+        background-color: $color-1;
+      }
+
+      .user_name {
+        color: $vert;
+        margin: 0;
+      }
+    }
+
+    .log {
+        height: 0;
+        width: 0;
         .log-d-flex {
           position: absolute;
           top: 60px;
@@ -115,18 +129,6 @@
           }
         }
       }
-
-      .avatar {
-        height: 30px;
-        width: 30px;
-        background-color: $color-1;
-      }
-
-      .user_name {
-        color: $vert;
-        margin: 0;
-      }
-    }
   }
 }
 

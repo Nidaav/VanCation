@@ -12,38 +12,38 @@
   <div class="right">
     <div class="container-user">
       <i class="fas fa-bars"></i>
-      <div class="log" style="display: none;">
-        <div class="log-d-flex">
-          <% unless current_user %>
-            <div class="connexion item-log">
-              <%= link_to 'Connexion', user_session_path, class: "btn-log"%>
-            </div>
-            <div class="insciption item-log">
-              <%= link_to 'Inscription', new_user_registration_path, class: "btn-log"%>
-            </div>
-          <% else %>
-            <div class="bookings item-log">
-              <%= link_to 'Mon profil', bookings_path, class: "btn-log"%>
-            </div>
-            <div class="bookings item-log">
-              <%= link_to 'Mes réservations', bookings_path, class: "btn-log"%>
-            </div>
-            <div class="bookings item-log">
-              <%= link_to 'Louez votre van', bookings_path, class: "btn-log"%>
-            </div>
-            <div class="bookings item-log">
-              <%= link_to "Besoin d'aide ?", bookings_path, class: "btn-log"%>
-            </div>
-            <div class="deconection item-log">
-              <%= link_to 'Déconnexion', destroy_user_session_path, method: :delete ,class: "btn-log"%>
-            </div>
-          <% end %>
-        </div>
-      </div>
       <% if current_user %>
         <p class="user_name"><%= current_user.first_name %></p>
         <%= cl_image_tag(current_user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar") %>
       <% end %>
+    </div>
+    <div class="log" style="display: none;">
+      <div class="log-d-flex">
+        <% unless current_user %>
+          <div class="connexion item-log">
+            <%= link_to 'Connexion', user_session_path, class: "btn-log"%>
+          </div>
+          <div class="insciption item-log">
+            <%= link_to 'Inscription', new_user_registration_path, class: "btn-log"%>
+          </div>
+        <% else %>
+          <div class="bookings item-log">
+            <%= link_to 'Mon profil', bookings_path, class: "btn-log"%>
+          </div>
+          <div class="bookings item-log">
+            <%= link_to 'Mes réservations', bookings_path, class: "btn-log"%>
+          </div>
+          <div class="bookings item-log">
+            <%= link_to 'Louez votre van', new_van_path, class: "btn-log"%>
+          </div>
+          <div class="bookings item-log">
+            <%= link_to "Besoin d'aide ?", bookings_path, class: "btn-log"%>
+          </div>
+          <div class="deconection item-log">
+            <%= link_to 'Déconnexion', destroy_user_session_path, method: :delete ,class: "btn-log"%>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </nav>
