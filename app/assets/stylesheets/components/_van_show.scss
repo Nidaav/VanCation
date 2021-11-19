@@ -1,13 +1,22 @@
 .container-show {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding: 30px;
   width: 100%;
 
   .left {
     padding: 30px;
-    width: 60%;
+    width: 50%;
     height: 100%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-right: 15px;
+
+    .carousel-inner {
+      height: 400px;
+    }
 
     .show-header {
       display: flex;
@@ -16,11 +25,11 @@
       padding-top: 24px;
 
       h1 {
-        font-size: 32px;
+        font-size: 24px;
       }
 
       h2 {
-        font-size: 24px;
+        font-size: 16px;
         font-weight: 300;
       }
     }
@@ -32,13 +41,117 @@
     .carousel-inner {
       border-radius: 10px;
     }
+
+    .info-header {
+      display: flex;
+      padding-top: 20px;
+      border-bottom: 1px solid black;
+      height: 100px;
+      justify-content: space-between;
+      padding: 0 30px;
+      align-items: center;
+
+      h3 {
+        font-weight: 300;
+      }
+
+      .avatar-show {
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
   }
 
+
   .right {
-    width: 40%;
+    width: 50%;
     height: 100%;
+    margin-left: 15px;
+
+    .container-resa {
+      height: 100%;
+      width: 100%;
+
+      .form-wrapper {
+        background-color: $color-1;
+        padding: 30px;
+        color: $vert;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        .van-btn {
+          padding: 8px 16px;
+          background-color: $vert;
+          border: 1px solid $color-1;
+          color: $color-1;
+          text-decoration: none;
+          transition: 0.5s ease-in;
+
+          &:hover {
+            background-color: $color-1;
+            border: 1px solid $vert;
+            color: $vert;
+            transition: 0.5s ease-in;
+          }
+        }
+      }
+
+      .card-d-flex-review {
+        height: 100%;
+        width: 100%;
+
+        .card-review {
+          height: 100px;
+          width: 100%;
+          margin: 10px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          background-color: white;
+          transition: 0.4s ease-in;
+
+          &:hover {
+            transform: scale(0.98);
+            transition: 0.4s ease-in;
+          }
+
+          .left-card {
+            height: 100%;
+            width: 20%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: column;
+
+            .avatar {
+              height: 50px;
+              width: 50px;
+              background-color: rgb(0, 0, 0);
+            }
+          }
+
+          .right-card {
+            height: 100%;
+            width: 80%;
+            padding: 10px;
+
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
   }
 }
+
+
+
+
+
+
 
 .show-image {
   height: 500px;
@@ -46,23 +159,6 @@
   object-position: center;
 }
 
-.info-header {
-  display: flex;
-  padding-top: 20px;
-  border-bottom: 1px solid black;
-  height: 100px;
-  justify-content: space-between;
-  padding: 0 30px;
-  align-items: center;
-  h3 {
-    font-weight: 300;
-  }
-
-  .avatar-show {
-    border-radius: 50%;
-    object-fit: cover;
-  }
-}
 
 .price-van-show {
   display: flex;
