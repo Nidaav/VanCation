@@ -130,5 +130,10 @@
         </div>
       </div>
     </div>
+    <ul>
+    <% @van.reviews.each do |review| %>
+    <li><%= review.comment %></li>
+    <% end %>
+    </ul>
   </div>
 </div>
