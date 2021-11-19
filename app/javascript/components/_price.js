@@ -19,6 +19,8 @@ const computeTotalPrice = () => {
 const totalPrice = () => {
   const initialDateElement = document.querySelector("#initialDate")
   const endingDateElement = document.querySelector("#endingDate")
+  if (!initialDateElement) return
+
   initialDateElement.addEventListener("change", computeTotalPrice)
   endingDateElement.addEventListener("change", computeTotalPrice)
 }
