@@ -30,7 +30,7 @@
 
       h2 {
         font-size: 16px;
-        font-weight: 300;
+        font-weight: 500;
       }
     }
 
@@ -52,12 +52,17 @@
       align-items: center;
 
       h3 {
-        font-weight: 300;
+        font-weight: 500;
       }
 
       .avatar-show {
         border-radius: 50%;
         object-fit: cover;
+      }
+    }
+    .price-van-show{
+      h3 {
+        font-weight: 500;
       }
     }
   }
@@ -74,10 +79,22 @@
 
       .form-wrapper {
         background-color: $color-1;
-        padding: 30px;
-        color: $vert;
+        padding: 40px;
+        color: $color-3;
         border-radius: 20px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          h4{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            align-items: center;
+
+            .total_price_counter{
+              font-weight: 800;
+              font-size: 2rem;
+              color: $vert;
+            }
+          }
 
         .van-btn {
           padding: 8px 16px;
@@ -85,13 +102,17 @@
           border: 1px solid $color-1;
           color: $color-1;
           text-decoration: none;
-          transition: 0.5s ease-in;
+          transition: 0.3s ease-in;
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
           &:hover {
             background-color: $color-1;
             border: 1px solid $vert;
             color: $vert;
-            transition: 0.5s ease-in;
+            transition: 0.3s ease-in;
           }
         }
       }
