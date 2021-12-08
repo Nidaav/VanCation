@@ -36,7 +36,6 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.status = "Pending"
     @booking.price_total = @van.price * ((@booking.ends_at - @booking.starts_at).to_i + 1) / (24 * 60 * 60)
-    p @booking.price_total
     if @booking.save!
       redirect_to(bookings_path)
     else

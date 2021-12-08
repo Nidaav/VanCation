@@ -46,9 +46,9 @@
             <%= f.input :starts_at, as: :string, required: false, label: "Début le", input_html: {class: "start-datepicker", id:"initialDate", value: DateTime.now.strftime("%Y-%m-%d")} %>
             <%= f.input :ends_at, as: :string, required: false, label: "Fin le", input_html: {class: "end-datepicker", id:"endingDate", value: DateTime.tomorrow.strftime("%Y-%m-%d")} %>
           </div>
-          <p>Pour un total de <span class="total_price_counter"><%= @van.price %></span> €</p>
+          <h4>Pour un total de &nbsp;<span class="total_price_counter"> <%=  @van.price %> </span>€</h4>
           <%= check_box_tag :checkbox %>
-          <%= f.label "J'accepte les conditions" %>
+          <%= f.label "J'ai lu et j'accepte les conditions générales de location" %>
         <div class="form-actions">
           <%= f.button :submit, "Réserver ce van", class: "van-btn" %>
         </div>
