@@ -94,8 +94,20 @@
               font-size: 2rem;
               color: $vert;
             }
-          }
 
+          }
+          .checkbox-cond{
+            display: flex;
+            align-items: center;
+            p{
+              margin-top: 14px;
+              margin-left: 15px;
+            }
+          }
+        .form-actions{
+          display: flex;
+          justify-content: center;
+        }
         .van-btn {
           padding: 8px 16px;
           background-color: $vert;

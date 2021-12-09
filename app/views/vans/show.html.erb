@@ -47,12 +47,14 @@
             <%= f.input :ends_at, as: :string, required: false, label: "Fin le", input_html: {class: "end-datepicker", id:"endingDate", value: DateTime.tomorrow.strftime("%Y-%m-%d")} %>
           </div>
           <h4>Pour un total de &nbsp;<span class="total_price_counter"> <%=  @van.price %> </span>€</h4>
-          <%= check_box_tag :checkbox %>
-          <%= f.label "J'ai lu et j'accepte les conditions générales de location" %>
-        <div class="form-actions">
-          <%= f.button :submit, "Réserver ce van", class: "van-btn" %>
-        </div>
-      <% end %>
+          <div class="checkbox-cond">
+            <%= check_box_tag :checkbox%>
+            <p>J'ai lu et j'accepte les <%= link_to "conditions générales de location", "#" %>
+          </div>
+          <div class="form-actions">
+            <%= f.button :submit, "Réserver ce van", class: "van-btn" %>
+          </div>
+        <% end %>
       </div>
       <div class="card-d-flex-review">
         <% @van.reviews.each do |review| %>
