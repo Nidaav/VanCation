@@ -74,17 +74,21 @@ van1.photos.attach(io: file, filename: "int1.png", content_type: 'image/png')
 van1.save!
 
 puts "Van 2..."
-van2 = Van.new( user_id: user1.id, model: "Renault", capacity: 5, description: "Nous vous proposons de vous évadez à bord de notre Vito Marco Polo. Parfaitement adapté pour un weekend au soleil ou un road trip de plusieurs semaines.
+description = <<~TEXT
+  Nous vous proposons de vous évadez à bord de notre Vito Marco Polo. Parfaitement adapté pour un weekend au soleil ou un road trip de plusieurs semaines.
 
-Son look discret et ces petites dimensions vous permettent de passer partout (accès sous toutes les barres de parking car hauteur - de 2 mètres) et les péages sont au même prix qu'une voiture.
+  Son look discret et ces petites dimensions vous permettent de passer partout (accès sous toutes les barres de parking car hauteur - de 2 mètres) et les péages sont au même prix qu'une voiture.
 
-Avec son poste de conduite agréable (boite auto, direction assistée, climatisation, accoudoirs, siège multi-réglables) vous ne subissez pas les kilomètres.
+  Avec son poste de conduite agréable (boite auto, direction assistée, climatisation, accoudoirs, siège multi-réglables) vous ne subissez pas les kilomètres.
 
-Idéal pour une personne seule, un couple, ou, comme nous, une famille de 4, il vous permet de vivre en autonomie pendant plusieurs jours grâce à sa batterie auxilliaire et sa reserve d'eau de 60 L.
+  Idéal pour une personne seule, un couple, ou, comme nous, une famille de 4, il vous permet de vivre en autonomie pendant plusieurs jours grâce à sa batterie auxilliaire et sa reserve d'eau de 60 L.
 
-4 places assises et 4 couchages, il se transforme en salon ou en chambres en quelques manipulations simples que nous prendrons le temps de vous expliquer.
+  4 places assises et 4 couchages, il se transforme en salon ou en chambres en quelques manipulations simples que nous prendrons le temps de vous expliquer.
 
-Nous mettons à votre disposition tout le kit camping (auvent, table extérieure, chaises et tabourets, barbecue gaz, cabine de douche dépliable 2 seconde) et, en cas d'intempéries, vous bénéficiez de la kitchenette intérieure (avec frigo et gazinière) et espace salon.", price: 90, address: "Nantes")
+  Nous mettons à votre disposition tout le kit camping (auvent, table extérieure, chaises et tabourets, barbecue gaz, cabine de douche dépliable 2 seconde) et, en cas d'intempéries, vous bénéficiez de la kitchenette intérieure (avec frigo et gazinière) et espace salon.
+TEXT
+
+van2 = Van.new( user_id: user1.id, model: "Renault", capacity: 5, description: description, price: 90, address: "Nantes")
 file = File.open("#{Rails.root}/db/fixtures/images/van2.jpg")
 van2.photos.attach(io: file, filename: "van2.png", content_type: 'image/png')
 file = File.open("#{Rails.root}/db/fixtures/images/int2.jpeg")
@@ -108,13 +112,16 @@ van3.photos.attach(io: file, filename: "int3.png", content_type: 'image/png')
 van3.save!
 
 puts "Van 4..."
-van4 = Van.new( user_id: user4.id, model: "Volkswagen", capacity: 4, description: "Bonjour,
-Ce van vous permettra de partir directement en toute autonomie, il est équipé de 2 couchages doubles, de 2 feux de cuisson, d'un évier + réserve d'eau, d'un réfrigérateur, de la climatisation, d'une douchette à l'arrière, d'un chauffage stationnaire pour les nuits fraiches et de vaisselle et ustensiles pour la préparation de repas basiques…
-Un auvent situé au-dessus de la porte latérale coulissante vient agrandir l'espace de vie pour éventuellement abriter la table amovible et les chaises et tabourets pliants astucieusement intégrés dans l'habillage de la porte coulissante et du hayon arrière.
-Le véhicule est dans un état neuf et il se conduit comme une voiture, passe sous les portiques de 2,00 mètres (tarif voiture sur autoroute) et consomme en moyenne 8 l/100 kms...
-Le California Coast T6 ( boite automatique) est le campervan moderne de référence, issu du savoir-faire historique de Volkswagen qui inventa le voyage en van aménagé il y a plus de 60 ans.
-Conçu pour sillonner les contrées en toute autonomie et toute discrétion grâce à son petit gabarit, il vous offre la possibilité de voyager et passer la nuit où bon vous semble...
-La plupart des barrières de limitation de stationnement ou les petites routes sinueuses des petits villages de montagne ne sont pas un problème.", price: 110, address: "Rennes")
+description = <<~TEXT
+  "Bonjour,
+  Ce van vous permettra de partir directement en toute autonomie, il est équipé de 2 couchages doubles, de 2 feux de cuisson, d'un évier + réserve d'eau, d'un réfrigérateur, de la climatisation, d'une douchette à l'arrière, d'un chauffage stationnaire pour les nuits fraiches et de vaisselle et ustensiles pour la préparation de repas basiques…
+  Un auvent situé au-dessus de la porte latérale coulissante vient agrandir l'espace de vie pour éventuellement abriter la table amovible et les chaises et tabourets pliants astucieusement intégrés dans l'habillage de la porte coulissante et du hayon arrière.
+  Le véhicule est dans un état neuf et il se conduit comme une voiture, passe sous les portiques de 2,00 mètres (tarif voiture sur autoroute) et consomme en moyenne 8 l/100 kms...
+  Le California Coast T6 ( boite automatique) est le campervan moderne de référence, issu du savoir-faire historique de Volkswagen qui inventa le voyage en van aménagé il y a plus de 60 ans.
+  Conçu pour sillonner les contrées en toute autonomie et toute discrétion grâce à son petit gabarit, il vous offre la possibilité de voyager et passer la nuit où bon vous semble...
+  La plupart des barrières de limitation de stationnement ou les petites routes sinueuses des petits villages de montagne ne sont pas un problème."
+TEXT
+van4 = Van.new( user_id: user4.id, model: "Volkswagen", capacity: 4, description: description, price: 110, address: "Rennes")
 file = File.open("#{Rails.root}/db/fixtures/images/van4.jpg")
 van4.photos.attach(io: file, filename: "van4.png", content_type: 'image/png')
 file = File.open("#{Rails.root}/db/fixtures/images/int4.png")
@@ -136,12 +143,7 @@ van5.photos.attach(io: file, filename: "int5.png", content_type: 'image/png')
 van5.save!
 
 puts "Van 6..."
-van6 = Van.new( user_id: user6.id, model: "Volskwagen T5", capacity: 5, description: "Envie de vous évader ? partez à l'aventure à 2 ou en famille avec 2 enfants dans un véhicule avec tout le confort moderne et agréable à conduire. qui fait à la fois camping car et également qui vous permet circuler librement en centre ville et vous garez comme une voiture normale grâce à sa hauteur qui ne dépasse pas 2m, et également vous payez au péage les mêmes prix qu'une voiture normale.
-
-Ce véhicule est tout récent d'aout 2020, le Kepler one combi T6 de 150ch, à disposition sur Paris 15 ème.
-Le matériel de cuisine et la vaisselle sont inclus, tout comme les draps housses.
-Chauffe-eau pour la douche et à disposition de WC chimique à disposition.
-Surtout ne pas hésiter à me contacter pour plus d'information.", price: 150, address: "Nice")
+van6 = Van.new( user_id: user6.id, model: "Volskwagen T5", capacity: 5, description: "description", price: 150, address: "Nice")
 file = File.open("#{Rails.root}/db/fixtures/images/van6.jpg")
 van6.photos.attach(io: file, filename: "van6.png", content_type: 'image/png')
 file = File.open("#{Rails.root}/db/fixtures/images/int6.jpeg")
@@ -159,7 +161,7 @@ van7.photos.attach(io: file, filename: "int7.png", content_type: 'image/png')
 van7.save!
 
 puts "Van 8..."
-van8 = Van.new( user_id: user8.id, model: "Volskwagen VW", capacity: 5, description: "Véhicule disposant de 4 places assises, en parfait état mécanique, autoradio, direction assistée, faible consommation de gazoil. Révision Août 2021.  Van très bien équipé : Kitchenette avec vaisselle pour 4, frigo, douche chaude avec grande réserve d'eau (70l), toilette chimique portatif, tente isoloir, table, chaises pliantes, nombreux rangements. Batterie de servitude dédiée à la recharge de vos équipements électroniques et des equipements de la cellule du Van. La tente de toit vous offrira des vues imprenables grâce à ses ouvrants sur vos spots.", price: 170, address: "Lille")
+van8 = Van.new( user_id: user8.id, model: "Volskwagen VW", capacity: 5, description: "Véhicule disposant de 4 places assises, en parfait état mécanique, autoradio, direction assistée, faible consommation de gazoil. Révision Août 2021.  Van très bien équipé.", price: 170, address: "Lille")
 file = File.open("#{Rails.root}/db/fixtures/images/van8.jpg")
 van8.photos.attach(io: file, filename: "van8.png", content_type: 'image/png')
 file = File.open("#{Rails.root}/db/fixtures/images/int8.jpeg")
@@ -185,12 +187,12 @@ file = File.open("#{Rails.root}/db/fixtures/images/int10.jpeg")
 van10.photos.attach(io: file, filename: "int10.png", content_type: 'image/png')
 van10.save!
 
-booking1 = Booking.create!(user_id: user9.id, van_id: van4.id, starts_at: 8.days.ago, ends_at: 3.days.ago, price_total: 540, status: "accepted")
-booking2 = Booking.create!(user_id: user8.id, van_id: van5.id, starts_at: 10.days.ago, ends_at: 6.days.ago, price_total: 480, status: "declined")
-booking3 = Booking.create!(user_id: user7.id, van_id: van4.id, starts_at: 20.days.from_now, ends_at: 30.days.from_now, price_total: 1500, status: "pending")
-booking4 = Booking.create!(user_id: user3.id, van_id: van5.id, starts_at: 10.days.from_now, ends_at: 15.days.from_now, price_total: 750, status: "pending")
-booking5 = Booking.create!(user_id: user5.id, van_id: van4.id, starts_at: 15.days.from_now, ends_at: 22.days.from_now, price_total: 700, status: "pending")
-booking6 = Booking.create!(user_id: user1.id, van_id: van5.id, starts_at: 45.days.from_now, ends_at: 55.days.from_now, price_total: 1700, status: "pending")
+booking1 = Booking.create!(user_id: user9.id, van_id: van4.id, starts_at: 8.days.ago, ends_at: 3.days.ago, price_total: 540, accepted: "accepted")
+booking2 = Booking.create!(user_id: user8.id, van_id: van5.id, starts_at: 10.days.ago, ends_at: 6.days.ago, price_total: 480, accepted: "declined")
+booking3 = Booking.create!(user_id: user7.id, van_id: van4.id, starts_at: 20.days.from_now, ends_at: 30.days.from_now, price_total: 1500, accepted: "pending")
+booking4 = Booking.create!(user_id: user3.id, van_id: van5.id, starts_at: 10.days.from_now, ends_at: 15.days.from_now, price_total: 750, accepted: "pending")
+booking5 = Booking.create!(user_id: user5.id, van_id: van4.id, starts_at: 15.days.from_now, ends_at: 22.days.from_now, price_total: 700, accepted: "pending")
+booking6 = Booking.create!(user_id: user1.id, van_id: van5.id, starts_at: 45.days.from_now, ends_at: 55.days.from_now, price_total: 1700, accepted: "pending")
 
 Review.create!(booking_id: booking1.id, rating: 5, comment: "Notre séjour était vraiment top!! Le van est parfait! Idéal pour 4 personnes. Je recommande fortement!")
 Review.create!(booking_id: booking2.id, rating: 5, comment: "Ce van est juste exceptionnel!! ")
